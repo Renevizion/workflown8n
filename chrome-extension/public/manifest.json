@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "n8n Interface Manipulator",
+  "version": "1.0.0",
+  "description": "Active interface manipulator for n8n - DOM injection and real-time workflow manipulation",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "n8n Interface Manipulator"
+  }
+}
