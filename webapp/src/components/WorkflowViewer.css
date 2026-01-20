@@ -1,0 +1,148 @@
+.workflow-viewer {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.workflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+.workflow-header h2 {
+  margin: 0;
+  color: #667eea;
+}
+
+.workflow-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.workflow-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-activate {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-deactivate {
+  background: #f44336;
+  color: white;
+}
+
+.workflow-actions button:hover {
+  opacity: 0.8;
+}
+
+.status {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status.active {
+  color: #4caf50;
+}
+
+.status.inactive {
+  color: #aaa;
+}
+
+.workflow-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.workflow-info p {
+  margin: 0;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+.workflow-info strong {
+  color: #aaa;
+  margin-right: 0.5rem;
+}
+
+.workflow-nodes h3 {
+  margin: 0 0 1rem 0;
+  color: #667eea;
+}
+
+.nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.node-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+}
+
+.node-type {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.node-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.node-version {
+  font-size: 0.75rem;
+  color: #667eea;
+}
+
+.workflow-json {
+  margin-top: 1.5rem;
+}
+
+.workflow-json h3 {
+  margin: 0 0 1rem 0;
+  color: #667eea;
+}
+
+.workflow-json pre {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .workflow-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nodes-grid {
+    grid-template-columns: 1fr;
+  }
+}
