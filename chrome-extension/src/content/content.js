@@ -81,7 +81,15 @@ function injectNode(nodeData) {
 async function pushToN8nAPI(workflowData) {
   try {
     // Get API configuration from storage
-    const config = await chrome.storage.local.get(['n8n_api_key', 'n8n_api_url']);
+    const config = await new Promise((resolve, reject) => {
+      chrome.storage.local.get(['n8n_api_key', 'n8n_api_url'], (result) => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError);
+        } else {
+          resolve(result);
+        }
+      });
+    });
     
     if (!config.n8n_api_key || !config.n8n_api_url) {
       throw new Error('API configuration not found');
