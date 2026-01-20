@@ -1,9 +1,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+import { copyFileSync, mkdirSync } from 'fs';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'copy-files',
+      writeBundle() {
+        // Copy popup HTML and CSS after build
+        mkdirSync('dist/popup', { recursive: true });
+        copyFileSync('src/popup/index.html', 'dist/popup/index.html');
+        copyFileSync('src/popup/popup.css', 'dist/popup/popup.css');
+      }
+    }
+  ],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
@@ -16,7 +28,7 @@ export default defineConfig({
       output: {
         entryFileNames: (chunkInfo) => {
           if (chunkInfo.name === 'popup') {
-            return 'popup.js';
+            return 'popup/popup.js';
           }
           return '[name].js';
         },
@@ -24,7 +36,6 @@ export default defineConfig({
         assetFileNames: 'assets/[name].[ext]'
       }
     },
-    // Copy public folder to dist
     copyPublicDir: true
   },
   publicDir: 'public'
