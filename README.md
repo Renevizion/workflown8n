@@ -227,12 +227,14 @@ npm run preview         # Preview production build
 
 ## Contributing
 
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+## Documentation
+
+- 📖 [Quick Start Guide](QUICKSTART.md) - Get started in 5 minutes
+- 🔒 [Security Guide](SECURITY.md) - Important security considerations
+- 🎨 [Visual Guide](VISUAL_GUIDE.md) - UI screenshots and design
+- 🔑 [Extension Permissions](extension/PERMISSIONS.md) - Chrome extension permissions
 
 ## License
 
