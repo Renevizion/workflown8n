@@ -4,6 +4,10 @@ class N8nApiClient {
   constructor(baseUrl, apiKey) {
     this.baseUrl = baseUrl;
     this.apiKey = apiKey;
+    
+    // SECURITY WARNING: API keys are transmitted in headers from the client.
+    // Always use HTTPS for n8n instances. For production, use a backend proxy.
+    // See SECURITY.md for recommendations.
     this.client = axios.create({
       baseURL: baseUrl,
       headers: {

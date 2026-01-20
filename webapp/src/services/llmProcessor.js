@@ -6,6 +6,9 @@ class LLMProcessor {
     this.provider = provider;
     this.apiKey = apiKey;
     
+    // SECURITY WARNING: Using dangerouslyAllowBrowser exposes API keys in the client.
+    // This is suitable for personal use only. For production, implement a backend proxy.
+    // See SECURITY.md for recommendations.
     if (provider === 'openai') {
       this.client = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
     } else if (provider === 'anthropic') {

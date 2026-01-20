@@ -2,6 +2,12 @@
 
 An active interface manipulator for n8n with LLM-powered workflow generation. This project includes both a React web application and a Chrome extension for real-time workflow manipulation.
 
+## ⚠️ Security Notice
+
+**This tool is designed for personal use in trusted environments.** API keys are stored in the browser and transmitted directly to services. Before using in production or on shared devices, please review [SECURITY.md](SECURITY.md) for important security considerations and best practices.
+
+For production use, implement a backend proxy to securely handle API keys. See the security documentation for details.
+
 ## Features
 
 ### 🚀 Core Capabilities
