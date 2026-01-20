@@ -1,0 +1,23 @@
+{
+  "name": "workflown8n",
+  "version": "1.0.0",
+  "description": "Active interface manipulator for n8n with React web app and Chrome extension",
+  "private": true,
+  "workspaces": [
+    "web-app",
+    "chrome-extension"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:web": "npm run build --workspace=web-app",
+    "build:extension": "npm run build --workspace=chrome-extension"
+  },
+  "keywords": [
+    "n8n",
+    "workflow",
+    "automation",
+    "chrome-extension",
+    "react"
+  ],
+  "license": "MIT"
+}

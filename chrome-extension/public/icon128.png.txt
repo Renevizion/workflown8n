@@ -1,0 +1,2 @@
+This file should be a 128x128 PNG icon. For development, the extension can work without real icon files.
+Create a simple icon using any graphics tool or online icon generator.

@@ -1,0 +1,158 @@
+.popup-container {
+  min-width: 350px;
+  width: 400px;
+  min-height: 300px;
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #667eea;
+}
+
+.popup-header h1 {
+  color: #667eea;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.popup-header p {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.status {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.status.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.config-section h2,
+.actions-section h2 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.info-box {
+  background-color: #f0f7ff;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border-left: 3px solid #667eea;
+}
+
+.info-box p {
+  margin: 5px 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.feature-list {
+  margin: 15px 0;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.feature-list h3 {
+  color: #667eea;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.feature-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 4px 0;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.feature-list li:before {
+  content: "✓ ";
+  color: #667eea;
+  font-weight: bold;
+  margin-right: 5px;
+}
